@@ -1,0 +1,97 @@
+
+Neural Image Translation
+Using Cycle GANs to perform Unpaired Image to Image Translation with Tensorflow
+
+results
+
+Requirements
+Python 3
+Keras
+Tensorflow == 2.5.0
+Sklearn
+Skimage
+Numpy
+Matplotlib
+PIL
+Documentation
+Cycle GAN Training
+This script is used to define the Cycle GAN class, train the two Generative Adversarial Networks, generate samples, and save the model at every epoch interval.
+
+User Specified Parameters:
+batch_size: Integer representing how many images to train per batch.
+dataset_dimensions: Tuple defining dimensions to resize the dataset to during preprocessing.
+dataset_name : String representing name of Tensorflow Dataset (e.g. cycle_gan/apple2orange). Only needs to be defined if preprocessed_dataset is True.
+input_img_size: Tuple defining the size of the random crops to be used during training.
+input_path: File path pointing to folder containing input dataset. Only needs to be defined if preprocessed_dataset is False.
+interval: Integer representing how many epochs between saving your model.
+model_save_path: File path pointing to the folder where you want to save to model as well as generated samples.
+output_path: File path pointing to folder containing output dataset. Only needs to be defined if preprocessed_dataset is False.
+pretrain: Boolean flag for if you want to train starting with a pretrained model.
+pretrained_model_path: File path pointing to pretrained H5 model if pretraining mode is enabled.
+preprocessed_dataset: Boolean flag for if you want to train with a preprocessed Tensorflow Dataset.
+training_epochs: Integer representing how many epochs to train the model.
+Cycle GAN Inference
+This script is used to test trained Cycle GAN models and plot results.
+
+User Specified Parameters:
+dataset_dimensions: Tuple defining dimensions to resize the dataset to during preprocessing.
+dataset_name : String representing name of Tensorflow Dataset (e.g. cycle_gan/horse2zebra). Only needs to be defined if preprocessed_dataset is True.
+input_path: File path pointing to folder containing input dataset. Only needs to be defined if preprocessed_dataset is False.
+model_path: File path pointing to H5 model saved during training process.
+output_path: File path pointing to folder containing output dataset. Only needs to be defined if preprocessed_dataset is False.
+preprocessed_dataset: Boolean flag for if you want to train with a preprocessed Tensorflow Dataset.
+results_save_path: File path pointing to folder where generated results are saved.
+Generated Training Sample
+Training
+
+Results
+Horse to Zebra
+horse2zebra
+
+Zebra to Horse
+zebra2horse
+
+Winter to Summer
+winter2summer
+
+Summer to Winter
+summer2winter
+
+Map to Satelite
+map2satelite
+
+Satelite to Map
+satelite2map
+
+Orange to Apple
+orange2apple
+
+Apple to Orange
+apple2orange
+
+Releases
+No releases published
+Packages
+No packages published
+Languages
+Jupyter Notebook
+99.4%
+ 
+Python
+0.6%
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
+
+
+
